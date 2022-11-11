@@ -9,10 +9,10 @@ exit 1
 fi
 if [ $# -eq 0 ] ; then
 # Display the whole rememberfile when not given any search criteria.
-# more $rememberfile
+more $rememberfile
 else
 # Otherwise, search through the file for the given terms, and display
 # the results neatly.
 grep -i -- "$@" $rememberfile | ${PAGER:-more}
 fi
-exit 0
+exit 0 
